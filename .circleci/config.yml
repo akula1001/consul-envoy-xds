@@ -4,6 +4,10 @@ jobs:
     working_directory: /go/src/github.com/CircleCI-Public/consul-envoy-xds
     docker:
       - image: circleci/golang:1.9
+    branches:
+      only:
+        - master
+        - tmp
     steps:
       - checkout
       - setup_remote_docker:
